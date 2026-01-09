@@ -22,7 +22,7 @@ const PropertySchema = new Schema(
       street: String,
       city: String,
       state: String,
-      zipCode: String,
+      zipcode: String,
     },
     beds: {
       type: Number,
