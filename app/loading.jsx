@@ -12,7 +12,7 @@ const LoadingPage = () => {
       color={'#3b82f6'}
       cssOverride={cssOverride}
       size={150}
-      ariaLabel='Loading Spinner'
+      aria-label='Loading Spinner'
     />
   );
 };
