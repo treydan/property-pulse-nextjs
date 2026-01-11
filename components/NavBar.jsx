@@ -27,6 +27,12 @@ const NavBar = () => {
     setAuthProviders();
   }, []);
 
+  async function signOutAndRedirect() {
+    const callbackUrl = '/';
+    const redirect = pathname !== callbackUrl;
+    await signOut({ redirect, callbackUrl });
+  }
+
   return (
     <nav className='bg-blue-700 border-b border-blue-500'>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
@@ -205,7 +211,7 @@ const NavBar = () => {
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
-                      onClick={() => signOut({ redirect: false })}
+                      onClick={signOutAndRedirect}
                     >
                       Sign Out
                     </button>
