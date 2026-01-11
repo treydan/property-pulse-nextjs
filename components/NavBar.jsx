@@ -1,7 +1,7 @@
 'use client';
 
 import { FaGoogle } from 'react-icons/fa';
-import { signIn, useSession, getProviders } from 'next-auth/react';
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -202,6 +202,7 @@ const NavBar = () => {
                       role='menuitem'
                       tabIndex='-1'
                       id='user-menu-item-2'
+                      onClick={() => signOut({ redirect: false })}
                     >
                       Sign Out
                     </button>
