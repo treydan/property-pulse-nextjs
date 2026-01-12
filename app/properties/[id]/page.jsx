@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Property from '@/models/Property';
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
 import PropertyDetails from '@/components/PropertyDetails';
+import PropertyImages from '@/components/PropertyImages';
 
 const PropertyPage = async ({ params: { id } }) => {
   await connectDB();
@@ -29,6 +30,7 @@ const PropertyPage = async ({ params: { id } }) => {
           </div>
         </div>
       </section>
+      <PropertyImages images={property.images} />
     </>
   );
 };
