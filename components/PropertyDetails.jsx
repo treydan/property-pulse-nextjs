@@ -62,16 +62,16 @@ const PropertyDetails = ({ property }) => {
         <h3 className='text-lg font-bold mb-6'>Description & Details</h3>
         <div className='flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9'>
           <p className='flex items-center'>
-            <FaBed className='inline-block mr-2' /> {property.beds}{' '}
+            <FaBed className='inline-block mr-2' /> {property.beds}&nbsp;
             <span className='hidden sm:inline'>Beds</span>
           </p>
           <p className='flex items-center'>
-            <FaBath className='inline-block mr-2' /> {property.baths}{' '}
+            <FaBath className='inline-block mr-2' /> {property.baths}&nbsp;
             <span className='hidden sm:inline'>Baths</span>
           </p>
           <p className='flex items-center'>
-            <FaRulerCombined className='inline-block mr-2' />{' '}
-            {property.square_feet}{' '}
+            <FaRulerCombined className='inline-block mr-2' />
+            {property.square_feet}&nbsp;
             <span className='hidden sm:inline'>sqft</span>
           </p>
         </div>
