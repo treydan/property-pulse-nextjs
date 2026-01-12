@@ -1,8 +1,10 @@
 import '@/assets/styles/globals.css';
-import AuthProvider from '@/components/AuthProvider';
-import NavBar from '@/components/NavBar';
-import Footer from '@/components/Footer';
+import 'react-toastify/dist/ReactToastify.css';
 import { getSessionServer } from '@/utils/getSessionServer';
+import { ToastContainer } from 'react-toastify';
+import AuthProvider from '@/components/AuthProvider';
+import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
 
 export const metadata = {
   title: 'Property Pulse',
@@ -20,6 +22,7 @@ const RootLayout = async ({ children }) => {
           <NavBar />
           <main className='flex-1'>{children}</main>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>

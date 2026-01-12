@@ -1,4 +1,5 @@
 'use client';
+import { toast } from 'react-toastify';
 import { useState } from 'react';
 import deleteProperty from '@/app/actions/deleteProperty';
 import Image from 'next/image';
@@ -15,6 +16,7 @@ const ProfileProperties = ({ properties: initialProperties }) => {
 
     await deleteProperty(propertyId);
     setProperties(properties.filter(property => property._id !== propertyId));
+    toast.success('Property Deleted Successfully');
   };
 
   return (
@@ -39,7 +41,7 @@ const ProfileProperties = ({ properties: initialProperties }) => {
           </div>
           <div className='mt-2'>
             <Link
-              href='/properties/add'
+              href={`/properties/${property._id}/edit`}
               className='bg-blue-500 text-white px-3 py-3 rounded-md mr-2 hover:bg-blue-600'
             >
               Edit
