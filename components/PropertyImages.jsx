@@ -21,8 +21,8 @@ const PropertyImages = ({ images }) => {
                   src={image}
                   alt=''
                   className='object-cover h-[400px] w-full rounded-xl cursor-pointer'
-                  width='0'
-                  height='0'
+                  width={1800}
+                  height={400}
                   sizes='100vw'
                 />
               </div>
